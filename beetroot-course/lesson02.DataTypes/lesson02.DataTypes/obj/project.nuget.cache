@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uG/24Lg/dQilXlDN+eA3MD+Yk08pdTZ08ky3HfAQkGJcsOEKxFoFbLAc9HXUf2SDdMIf6cIdz9hwaB9f9FG7uQ==",
+  "success": true,
+  "projectFilePath": "G:\\C#_sharp_2\\beetroot-course\\lesson02.DataTypes\\lesson02.DataTypes\\lesson02.DataTypes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mandarin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
