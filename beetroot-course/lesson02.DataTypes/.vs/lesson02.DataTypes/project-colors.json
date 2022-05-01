@@ -1,11 +1,5 @@
 {
   "Version": 1,
-  "ProjectMap": {
-    "f7108d99-fb1e-43af-b493-8fecb9d08416": {
-      "ProjectGuid": "f7108d99-fb1e-43af-b493-8fecb9d08416",
-      "DisplayName": "lesson02.DataTypes",
-      "ColorIndex": 0
-    }
-  },
-  "NextColorIndex": 1
+  "ProjectMap": {},
+  "NextColorIndex": 0
 }
