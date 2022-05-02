@@ -12,15 +12,15 @@ namespace lesson02.Homework.DataTypes
             Console.WriteLine($"The third task: {2 * Math.PI * x}");
             Console.WriteLine($"The fourth task: {Math.Max(x, y)}");
 
-            var dateToday = new DateTime(2022, 4, 30, 21, 05, 52);
-            Console.WriteLine("\n Today " + dateToday.ToString("F"));
 
             //Extra
-            System.DateTime date1 = new System.DateTime(2022, 4, 30, 21, 05, 52);
+            DateTime dat = DateTime.Now;
+            Console.WriteLine("\nToday is {0:d} at {0:T}.", dat);
+            //System.DateTime date1 = new System.DateTime(2022, 4, 30, 21, 05, 52);
             System.DateTime date2 = new System.DateTime(2023, 1, 1, 00, 00, 0);
             System.DateTime date3 = new System.DateTime(2021, 1, 1, 00, 00, 0);
-            System.TimeSpan diff1 = date2 - date1;
-            System.TimeSpan diff2 = date1 - date3;
+            System.TimeSpan diff1 = date2 - dat;
+            System.TimeSpan diff2 = dat - date3;
             Console.WriteLine($"How many days until The New Year 2023:  {diff1}");
             Console.WriteLine($"How many days passed since The New Year 2021:  {diff2}");
 
