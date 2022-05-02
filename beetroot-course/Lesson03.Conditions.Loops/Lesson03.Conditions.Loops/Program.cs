@@ -124,6 +124,7 @@ namespace Lesson03.Conditions.Loops
                     Console.ReadKey();
                     break;
             }
+            //homework
         }
     }
 }
