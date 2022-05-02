@@ -1,0 +1,16 @@
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.exe
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.deps.json
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.runtimeconfig.json
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.runtimeconfig.dev.json
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.dll
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\ref\lesson02.Homework.DataTypes.dll
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\bin\Debug\net5.0\lesson02.Homework.DataTypes.pdb
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.csproj.AssemblyReference.cache
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.AssemblyInfoInputs.cache
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.AssemblyInfo.cs
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.csproj.CoreCompileInputs.cache
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.dll
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\ref\lesson02.Homework.DataTypes.dll
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.pdb
+G:\C#_sharp_2\beetroot-course\lesson02.Homework.DataTypes\lesson02.Homework.DataTypes\obj\Debug\net5.0\lesson02.Homework.DataTypes.genruntimeconfig.cache
