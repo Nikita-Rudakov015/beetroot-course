@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "E6kEnDwWxDbDOiJe6UWpRUSigqMpU7wuBfBrTLJfWdR8Rb93wIlTM55FsBIOmEjWdZV3YvsmIPqqrrblO8ihQQ==",
+  "success": true,
+  "projectFilePath": "G:\\C#_sharp_2\\beetroot-course\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mandarin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
