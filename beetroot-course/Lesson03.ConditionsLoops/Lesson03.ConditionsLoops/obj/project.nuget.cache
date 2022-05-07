@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Celni6cSCetiJ2A5v5fsJj+6ILxRo6dikhy5dfxAk6TV/nOlKMLl2ipTsawkJ9tKrY9HmWGSbchNT4P1buAm5w==",
+  "success": true,
+  "projectFilePath": "G:\\C#_sharp_2\\beetroot-course\\Lesson03.ConditionsLoops\\Lesson03.ConditionsLoops\\Lesson03.ConditionsLoops.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mandarin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

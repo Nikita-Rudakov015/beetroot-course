@@ -1,0 +1,16 @@
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.exe
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.deps.json
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.runtimeconfig.json
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.runtimeconfig.dev.json
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.dll
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\ref\Lesson03.ConditionsLoops.dll
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\bin\Debug\net5.0\Lesson03.ConditionsLoops.pdb
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.csproj.AssemblyReference.cache
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.AssemblyInfoInputs.cache
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.AssemblyInfo.cs
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.csproj.CoreCompileInputs.cache
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.dll
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\ref\Lesson03.ConditionsLoops.dll
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.pdb
+G:\C#_sharp_2\beetroot-course\Lesson03.ConditionsLoops\Lesson03.ConditionsLoops\obj\Debug\net5.0\Lesson03.ConditionsLoops.genruntimeconfig.cache
