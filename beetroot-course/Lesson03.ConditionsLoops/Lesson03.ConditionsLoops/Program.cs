@@ -126,7 +126,49 @@ namespace Lesson03.ConditionsLoops
                     break;
             }
             */
+            //homework
             //homework with Extra
+            /*Console.WriteLine("Please input two real numbers");
+            string digitX = Console.ReadLine();
+            string digitY = Console.ReadLine();
+            if (int.TryParse(digitX, out int X))
+            {
+                Console.WriteLine(digitX);
+            }
+            if (int.TryParse(digitY, out int Y))
+            {
+                Console.WriteLine(digitY);
+            }
+            else
+            {
+                Console.WriteLine("$Invalid input");
+                return;
+            }
+
+            if (X > Y)
+            {
+                int temp;
+
+                temp = X;
+                X = Y;
+                Y = temp;
+            }
+            int i = 0;
+            int sumXY = 0;
+            Console.Write("Sum = ");
+            for (i = X; i <= Y; i++)
+            {
+                if (i != Y + 1)
+                {
+                    Console.Write($" + {i}");
+                }
+                sumXY += i;
+                if (i == Y)
+                {
+                    Console.Write($" = {sumXY}");
+                }
+            }*/
+
             Console.WriteLine("Please input two real numbers");
             string digitX = Console.ReadLine();
             string digitY = Console.ReadLine();
