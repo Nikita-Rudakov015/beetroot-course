@@ -46,7 +46,7 @@ namespace Lesson04.Methods
             {
                 Console.WriteLine(str);
             }
-            //homework
+            // homework
             Console.WriteLine($"\nPlease enter variant of mehtods 1-5: \n" +
                 $"1) Method that will return max value among all the parameters \n" +
                 $"2) Method that will return min value among all the parameters \n" +
