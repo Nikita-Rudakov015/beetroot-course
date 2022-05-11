@@ -126,6 +126,7 @@ namespace Lesson03.ConditionsLoops
                     break;
             }
             */
+            //homework
             //homework with Extra
             Console.WriteLine("Please input two real numbers");
             string digitX = Console.ReadLine();
