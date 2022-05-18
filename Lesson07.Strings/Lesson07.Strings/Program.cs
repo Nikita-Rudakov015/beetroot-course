@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Lesson07.Strings
 {
@@ -22,7 +23,7 @@ namespace Lesson07.Strings
             for (int i = 0; i < hello.Length; i++)
             {
                 Console.WriteLine(hello[i]);
-            } 
+            }
             Console.WriteLine();
 
             Console.WriteLine(char.IsDigit(symbol));        //false
@@ -33,7 +34,7 @@ namespace Lesson07.Strings
             Console.WriteLine(char.ToUpper(','));           //,
 
             Console.WriteLine(string.Concat("string", "  ", "string"));
-            Console.WriteLine(hello.Contains('H'));         
+            Console.WriteLine(hello.Contains('H'));
             Console.WriteLine(hello.Contains("H"));
             Console.WriteLine(hello.Contains('s', StringComparison.InvariantCultureIgnoreCase));
             Console.WriteLine(hello.Insert(0, "Some inserted string "));
@@ -45,7 +46,7 @@ namespace Lesson07.Strings
             Console.WriteLine(hello.ToLowerInvariant());
             Console.WriteLine($"          {name}        ".Trim());
 
-            foreach(var item in hello.Split('i'))
+            foreach (var item in hello.Split('i'))
             {
                 Console.WriteLine(item);
             }
@@ -63,14 +64,14 @@ namespace Lesson07.Strings
 
             var emptyString = string.Empty;
             const int N = 1000;
-            for(int i = 0; i < N; i++)
+            for (int i = 0; i < N; i++)
             {
                 emptyString += $"{i} ";
             }
 
             var stringBuilder = new StringBuilder();
 
-            for(int j = 0;j < N; j++)
+            for (int j = 0; j < N; j++)
             {
                 stringBuilder.AppendFormat("{0} ", j);
             }
@@ -78,6 +79,32 @@ namespace Lesson07.Strings
             Console.WriteLine(stringBuilder.ToString());
 
             //abcbcd => ["b", "c"]
+            //Compare
+            /*Console.WriteLine("Please enter first string: ");
+            string first = Console.ReadLine();
+            Console.WriteLine($"Your string is: {first}");
+            Console.WriteLine("Please enter second string: ");
+            string second = Console.ReadLine();
+            Console.WriteLine($"Your string is {second}");
+            Console.WriteLine($"Method Compare is: {Compare(first, second)}");
+            //Analyze 
+            Console.WriteLine($"{Environment.NewLine}Please enter string: ");
+            first = Console.ReadLine();
+            Console.WriteLine($"Your string is: {first} {Environment.NewLine} Method Analyze is: {Analyze(first)}");
+            //Sort
+
+            Console.WriteLine($"{Environment.NewLine}Please enter string for sorting: ");
+            string first = Console.ReadLine();
+            //first = Console.ReadLine();
+            Console.WriteLine($"Your string is: {first} {Environment.NewLine}Method Sort is: {Sort(first)}");*/
+
+            Console.WriteLine($"{Environment.NewLine}Please enter string for duplicate: ");
+            string first = Console.ReadLine();
+            //first = Console.ReadLine();
+            //Console.WriteLine($"Your string is: {first} {Environment.NewLine}Method Duplicate is: {Duplicate(first)}");
+
+            string result = Duplicate(first);
+            Console.WriteLine($"Result method Duplicate is: {result}");
         }
 
         private void Print(string placeholder, string name)
@@ -85,5 +112,69 @@ namespace Lesson07.Strings
             Console.WriteLine(string.Format(placeholder, name));
             Console.WriteLine($"Hello, {name}");
         }
+
+        //homework
+        private static bool Compare(string first, string second)
+        {
+            bool result = false;
+            for (int i = 0; i < first.Length; i++)
+            {
+                for (int j = 0; j < second.Length; j++)
+                {
+                    if (first.Length == second.Length && first[i] == second[j])
+                        result = true;
+                    else if (first.Length != second.Length && first[i] != second[j])
+                    {
+                        result = false;
+                    }
+                }
+            }
+            return result;
+        }
+
+        private static int Analyze(string first)
+        {
+            return first.Length;
+        }
+
+        private static string Sort(string first)
+        {
+            char[] chars = first.ToCharArray();
+            for (int i = 1; i < chars.Length; i++)
+            {
+                for (int j = 0; j < chars.Length - 1; j++)
+                {
+                    if (chars[j] > chars[j + 1])
+                    {
+                        var temp = chars[j];
+                        chars[j] = chars[j + 1];
+                        chars[j + 1] = temp;
+                    }
+                }
+            }
+            string result = new (chars);
+            return result;
+        }
+
+        private static string Duplicate(string first)
+        {
+            char[] chars = first.ToCharArray();
+            string temp = String.Empty;          
+            for(int i = 0; i < chars.Length - 1; i++)
+            {
+                bool charExixts = false;
+                for (int j = i + 1; j < chars.Length; j++)
+                {
+                    if(!charExixts && !temp.Contains(chars[i]))
+                    {
+                        charExixts = true;
+                        temp += chars[i];
+                    }
+                }
+            }
+            return temp;
+        }
+
+        
     }
 }
