@@ -30,12 +30,16 @@ namespace Lesson08.Text
 
             var phoneBook = Deserialize(content);
 
-            phoneBook[1].number = 101010101;
+            //phoneBook[1].number = 101010101;
+            int right = phoneBook.Length;
 
-            var newRecord = (name: "Jacob", number: 1212);
+            /*var newRecord = (name: "Jacob", number: 1212);
             Add(ref phoneBook, newRecord);
-            Update(phoneBook, newRecord, 0);
-
+            Update(phoneBook, newRecord, 0);*/
+            Array.Sort(phoneBook);
+            //SortNumber(phoneBook);
+            BinarySearchName(phoneBook, "Nikita");
+            //BinarySearchNumber(phoneBook, 0, right, 2);
             var serializedBook = Serialize(phoneBook);
             foreach (var item in serializedBook)
             {
@@ -43,6 +47,87 @@ namespace Lesson08.Text
             }
 
             File.WriteAllLines(filePath, serializedBook);
+        }
+
+        private static int BinarySearchName((string name, int number)[] content, string searchTerm)
+        {
+            var phoneBook = content;
+            int first = 0;
+            int last = phoneBook.Length - 1;
+            int position = -1;
+            bool found = false;
+            int compCount = 0;
+
+            while (found != true && first <= last)
+            {
+                int middle = (first + last) / 2;
+
+                if (string.Compare(phoneBook[middle].name, searchTerm, true) == 0)
+                {
+                    found = true;
+                    position = middle;
+                    compCount++;
+
+                    Console.WriteLine("Your search has been found after " + compCount + " comparisons.");
+                }
+                else if (string.Compare(phoneBook[middle].name, searchTerm, true) > 0)
+                {
+                    last = middle;
+                    compCount++;
+                }
+                else
+                {
+                    first = middle;
+                    compCount++;
+                }
+            }
+            return position;
+            return compCount;
+        }
+
+        private static int BinarySearchNumber((string name, int number)[] content, int left, int right, int findNumber)
+        {
+            var phoneBook = content;
+            if (right >= left)
+            {
+                int middle = left + (right - left) / 2;
+
+                // If the element is present at the
+                // middle itself
+                if (phoneBook[middle].number == findNumber)
+                    return middle;
+
+                // If element is smaller than mid, then
+                // it can only be present in left subarray
+                if (phoneBook[middle].number > findNumber)
+                    return BinarySearchNumber(phoneBook, left, middle - 1, findNumber);
+
+                // Else the element can only be present
+                // in right subarray
+                return BinarySearchNumber(phoneBook, middle + 1, right, findNumber);
+            }
+
+            // We reach here when element is not present
+            // in array
+            return -1;
+        }
+
+        private static void SortNumber((string name, int number)[] content)
+        {
+            var phoneBook = content;
+            //char[] chars = phoneBook.ToCharArray();
+            for (int i = 1; i < phoneBook.Length; i++)
+            {
+                for (int j = 0; j < phoneBook.Length - 1; j++)
+                {
+                    if (phoneBook[j].number > phoneBook[j + 1].number)
+                    {
+                        var temp = phoneBook[j].number;
+                        phoneBook[j].number = phoneBook[j + 1].number;
+                        phoneBook[j + 1].number = temp;
+                    }
+                }
+            }
         }
 
         private static void Update((string name, int number)[] content, (string name, int number) updatedItem, int index)
