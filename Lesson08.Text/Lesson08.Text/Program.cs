@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -10,7 +9,7 @@ namespace Lesson08.Text
         static void Main(string[] args)
         {
             string filePath = "Phone book.csv";
-            string findName = "Andrew";
+
             string[] content = File.ReadAllLines(filePath);
 
             // (int a, int b) tuple;
@@ -28,7 +27,7 @@ namespace Lesson08.Text
             {
                 Console.WriteLine($"Name is {item.name}, number is {item.number}");
             }
-            
+
             var phoneBook = Deserialize(content);
 
             phoneBook[1].number = 101010101;
@@ -36,17 +35,6 @@ namespace Lesson08.Text
             var newRecord = (name: "Jacob", number: 1212);
             Add(ref phoneBook, newRecord);
             Update(phoneBook, newRecord, 0);
-
-
-            List<Program> names = new List<Program>();
-            names.Sort();
-            int result = BinarySearchName(phoneBook, findName);
-            string resultFounded = Convert.ToString(result);
-
-            if (result == -1)
-                Console.WriteLine("Element not present");
-            else
-                Console.WriteLine($"Element found at index {result}");
 
             var serializedBook = Serialize(phoneBook);
             foreach (var item in serializedBook)
@@ -56,48 +44,6 @@ namespace Lesson08.Text
 
             File.WriteAllLines(filePath, serializedBook);
         }
-
-        private static int BinarySearchName((string name, int number)[] content, string findName)
-        {
-            int low = 0, high = content.Length - 1;
-
-            while (low <= high)
-            {
-                int mid = low + (high - low) / 2;
-
-                int result = findName.content[mid];
-
-                if (result == 0)
-                    return mid;
-
-                if (result > 0)
-                    low = mid + 1;
-
-                else
-                    high = mid - 1;
-            }
-            return -1;
-        }
-        /*
-        private static string Sort((string name, int number)[] content)
-        {
-            string result = content;
-            char[] chars = content.ToCharArray();
-            for (int i = 1; i < chars.Length; i++)
-            {
-                for (int j = 0; j < chars.Length - 1; j++)
-                {
-                    if (chars[j] > chars[j + 1])
-                    {
-                        var temp = chars[j];
-                        chars[j] = chars[j + 1];
-                        chars[j + 1] = temp;
-                    }
-                }
-            }
-            string result = new(chars);
-            return result;
-        }*/
 
         private static void Update((string name, int number)[] content, (string name, int number) updatedItem, int index)
         {
@@ -136,7 +82,7 @@ namespace Lesson08.Text
 
             return strings;
         }
-        
+
         private static (string name, int number)[] Deserialize(string[] content)
         {
             var regexp = new Regex(@"^(\w+);(\d+)$");
@@ -148,7 +94,6 @@ namespace Lesson08.Text
 
                 if (match.Success)
                 {
-                    //Groups массив совпадений
                     book[i].name = match.Groups[1].Value;
                     book[i].number = int.Parse(match.Groups[2].Value);
                 }
