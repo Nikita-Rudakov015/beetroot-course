@@ -9,38 +9,96 @@ namespace Lesson08.Text
         static void Main(string[] args)
         {
             string filePath = "Phone book.csv";
+            string[] content;
 
-            string[] content = File.ReadAllLines(filePath);
-
-            // (int a, int b) tuple;
-            //
-            // tuple.b = 3;
-            // tuple.a = 1;
-            // int c = tuple.a + tuple.b;
-
-            foreach (var item in content)
+            try
             {
-                Console.WriteLine(item);
+                content = File.ReadAllLines(filePath);
+
+                foreach (var item in content)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            catch (ArgumentException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+            }
+            catch (FileNotFoundException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            finally
+            {
+                Console.WriteLine("Finaly");
+                content = Array.Empty<string>();
             }
 
+            try
+            {
+                content = File.ReadAllLines(filePath);
+
+                foreach (var item in content)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            catch (ArgumentNullException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (PathTooLongException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (DirectoryNotFoundException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (IOException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (UnauthorizedAccessException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (NotSupportedException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            catch (System.Security.SecurityException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}, type: {exception.GetType()}");
+                content = Array.Empty<string>();
+            }
+            finally
+            {
+                Console.WriteLine("Finaly");
+                content = Array.Empty<string>();
+            }
             foreach ((string name, int number) item in Deserialize(content))
             {
                 Console.WriteLine($"Name is {item.name}, number is {item.number}");
-            }
 
+            }  
             var phoneBook = Deserialize(content);
             int right = phoneBook.Length;
-            Console.WriteLine("Please enter name for binary searching");
+            Console.WriteLine("Please enter name for binary searching");       
             string findName = Console.ReadLine();
+            Array.Sort(phoneBook);
             Console.WriteLine("Please enter number for binary searching");
             string findNumber = Console.ReadLine();
             int findNum = Convert.ToInt32(findNumber);
-            /*var newRecord = (name: "Jacob", number: 1212);
-            Add(ref phoneBook, newRecord);
-            Update(phoneBook, newRecord, 0);*/
-            Array.Sort(phoneBook);           
             BinarySearchName(phoneBook, findName);
-            SortSelectionAscNumber(phoneBook);
+            //SortSelectionAscNumber(phoneBook);
             int result = BinarySearchNumber(phoneBook, 0, right - 1, findNum);
             if (result == -1)
             {
@@ -96,6 +154,22 @@ namespace Lesson08.Text
 
         private static int BinarySearchNumber((string name, int number)[] content, int left, int right, int findNumber)
         {
+            for (int i = 0; i < content.Length; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < content.Length; j++)
+                {
+                    if (content[j].number < content[minIndex].number)
+                    {
+                        minIndex = j;
+                    }
+                }
+
+                int temp = content[minIndex].number;
+                content[minIndex].number = content[i].number;
+                content[i].number = temp;
+            }
+
             var phoneBook = content;
             if (right >= left)
             {
@@ -121,7 +195,7 @@ namespace Lesson08.Text
             return -1;
         }
 
-        private static void SortSelectionAscNumber((string name, int number)[] content)
+        /*private static void SortSelectionAscNumber((string name, int number)[] content)
         {
             for (int i = 0; i < content.Length; i++)
             {
@@ -139,7 +213,7 @@ namespace Lesson08.Text
                 content[i].number = temp;
             }
 
-        }
+        }*/
 
         private static void Update((string name, int number)[] content, (string name, int number) updatedItem, int index)
         {
