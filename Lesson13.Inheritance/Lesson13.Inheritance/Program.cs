@@ -169,7 +169,7 @@ namespace Lesson13.Inheritance
 
             if (ReferenceEquals(obj, null)) return false;
 
-            Cat? cat = obj as Cat;           //savecast к типу данных в который хотим перевести
+            Animal? cat = obj as Animal;                     //savecast к типу данных в который хотим перевести
             if (cat == null)
             {
                 return false;
