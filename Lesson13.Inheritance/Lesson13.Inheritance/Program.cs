@@ -9,21 +9,21 @@ namespace Lesson13.Inheritance
             Animal animal = new Animal
             {
                 Name = "Sima",
-                PassCount = 4
+                PawsCount = 4
             };
             Cat cat = new Cat
             {
                 Name = "Kapuchinka",
-                PassCount = 4
+                PawsCount = 4
             };
 
             Dog dog = new Dog
             {
                 Name = "Lucky",
-                PassCount = 4
+                PawsCount = 4
             };
-            Console.WriteLine($"Animal {animal.Name} with {animal.PassCount} paws");
-            Console.WriteLine($"Cat {cat.Name} with {cat.PassCount} paws");
+            Console.WriteLine($"Animal {animal.Name} with {animal.PawsCount} paws");
+            Console.WriteLine($"Cat {cat.Name} with {cat.PawsCount} paws");
 
             animal.MakeNoise();
             cat.MakeNoise();
@@ -36,20 +36,26 @@ namespace Lesson13.Inheritance
                 Name = "Busya"
             };
             a.MakeNoise();
+            Console.WriteLine(a.GetType());
+            Console.WriteLine(a is Cat);
+            Console.WriteLine(a is Dog);
 
             a = new Dog
             {
                 Name = "Lucky"
             };
             a.MakeNoise();
+            Console.WriteLine(a.GetType());
+            Console.WriteLine(a is Cat);
+            Console.WriteLine(a is Dog);
 
             Cat anotherCat = new Cat
             {
                 Name = "Kapuchinka",
-                PassCount = 4
+                PawsCount = 4
             };
 
-            Console.WriteLine(cat.Equals(anotherCat));
+            Console.WriteLine($"{cat.Name} equal {anotherCat.Name} = {cat.Equals(anotherCat)}");
             Console.WriteLine(cat.Equals(cat));
 
             object obj1 = 4;
@@ -149,17 +155,14 @@ namespace Lesson13.Inheritance
     public class Animal
     {
         public string Name { get; set; }
-        public int PassCount { get; set; }
+        public int PawsCount { get; set; }
         public int Size { get; set; }
 
         public virtual void MakeNoise()
         {
 
         }
-    }
 
-    public class Cat : Animal
-    {
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(this, obj)) return true;
@@ -167,13 +170,21 @@ namespace Lesson13.Inheritance
             if (ReferenceEquals(obj, null)) return false;
 
             Cat? cat = obj as Cat;           //savecast к типу данных в который хотим перевести
-            if (obj is Cat)
+            if (cat == null)
             {
-
+                return false;
             }
-            return false;
-        }
 
+            if (this.Name != cat.Name) return false;
+            if (this.Size != cat.Size) return false;
+            if (this.PawsCount != cat.PawsCount) return false;
+
+            return true;
+        }
+    }
+
+    public class Cat : Animal
+    {       
         public override void MakeNoise()
         {
             Console.WriteLine($"{this.Name} said Mew!");
