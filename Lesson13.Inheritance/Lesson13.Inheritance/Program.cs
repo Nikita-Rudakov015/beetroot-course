@@ -82,6 +82,11 @@ namespace Lesson13.Inheritance
             var duck1 = new Duck(new JustNoise());
             duck.MakeNoise();
             duck1.MakeNoise();
+
+            var passengerVehicle = new AutoService(new PassengerVehicle());
+            var freightVehicle = new AutoService(new FreightVehicle());
+            passengerVehicle.AssemblyOfVehicle();
+            freightVehicle.AssemblyOfVehicle();
         }
     }
 }
