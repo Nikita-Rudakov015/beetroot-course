@@ -80,3 +80,23 @@ p
 {
     background: #dadada;
 }
+
+.EnterNum
+{
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.calculater
+{
+    padding-top: 4rem;
+    margin-left: 4rem;
+}
+
+.name
+{
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 400;
+}
