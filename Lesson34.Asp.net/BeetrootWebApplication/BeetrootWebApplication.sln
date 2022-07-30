@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootWebApplication", "BeetrootWebApplication\BeetrootWebApplication.csproj", "{CD05F9A5-D2EE-45E8-AAF3-33C91E032D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD05F9A5-D2EE-45E8-AAF3-33C91E032D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD05F9A5-D2EE-45E8-AAF3-33C91E032D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD05F9A5-D2EE-45E8-AAF3-33C91E032D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD05F9A5-D2EE-45E8-AAF3-33C91E032D06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF92017F-616E-4707-BD5B-5D44591BC180}
+	EndGlobalSection
+EndGlobal
