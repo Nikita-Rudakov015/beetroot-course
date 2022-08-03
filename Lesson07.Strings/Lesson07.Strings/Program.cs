@@ -172,6 +172,12 @@ namespace Lesson07.Strings
             return temp;
         }
 
+        private static string Order(string input)
+        {
+            char[] separator = { ' ' };
+
+            String[] strlist = input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+        }
 
     }
 }
