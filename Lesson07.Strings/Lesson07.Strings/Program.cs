@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lesson07.Strings
 {
@@ -8,7 +9,7 @@ namespace Lesson07.Strings
     {
         static void Main(string[] args)
         {
-            string name = "Serhii";
+            /*string name = "Serhii";
             string hisName = "Nick";
             string placeholder = "Hello, {0} and {1}";
 
@@ -101,7 +102,72 @@ namespace Lesson07.Strings
             Console.WriteLine($"{Environment.NewLine}Please enter string for duplicate: ");
             first = Console.ReadLine();
             string result = Duplicate(first);
-            Console.WriteLine($"Result method Duplicate is: {result}");
+            Console.WriteLine($"Result method Duplicate is: {result}");*/
+
+            Console.WriteLine(Order("56 65 74 100 99 68 86 180 47 1 86 90"));
+            //something new 
+            string Order(string input)
+            {
+                /*char[] separator = { ' ' };
+
+                String[] stringlist = input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
+                int sumOfNum = 0;
+                for(int i = 0; i < stringlist.Length; i++)
+                {
+                    stringlist[i]
+                }*/
+                List<int> list = input.Split(' ').Select(Int32.Parse).OrderBy(i => i).ToList();
+                List<int> SumofNums = new List<int>();
+                List<string> SumandNums = new List<string>();
+                List<string> SumandNums2 = new List<string>();
+                List<string> Nums = new List<string>();
+
+                foreach (var itm in list)
+                {
+                    int num = (int)GetSumOfDigits(itm);
+                    SumofNums.Add(num);
+                    SumandNums.Add(itm + "," + num);
+                }
+                SumofNums = SumofNums.OrderBy(i => i).ToList();
+                string txt = "";
+                foreach (var itm in SumofNums)
+                {
+                    var item = itm.ToString();
+                    if (!Nums.Contains(item))
+                    {
+                        foreach (var itm2 in SumandNums)
+                        {
+                            var itm3 = itm2.Split(',');
+                            if (item == itm3[1])
+                            {
+                                SumandNums2.Add(itm2);
+                                if (string.IsNullOrEmpty(txt))
+                                    txt = itm3[0];
+                                else
+                                    txt = txt + " " + itm3[0];
+                            }
+                        }
+                        Nums.Add(item);
+                    }
+                }
+
+                return txt;
+            }
+            static long GetSumOfDigits(long n)
+            {
+                long num2 = 0;
+                long num3 = n;
+                long r = 0;
+                while (num3 != 0)
+                {
+                    r = num3 % 10;
+                    num3 = num3 / 10;
+                    num2 = num2 + r;
+                }
+
+                return num2;
+            }
         }
 
         private void Print(string placeholder, string name)
@@ -171,13 +237,5 @@ namespace Lesson07.Strings
             }
             return temp;
         }
-
-        private static string Order(string input)
-        {
-            char[] separator = { ' ' };
-
-            String[] strlist = input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-        }
-
     }
 }
